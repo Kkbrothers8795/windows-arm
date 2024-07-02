@@ -5,7 +5,7 @@ ARG VERSION_ARG="0.0"
 ARG DEBCONF_NOWARNINGS="yes"
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG DEBCONF_NONINTERACTIVE_SEEN="true"
-ARG privileged: true
+ARG --cap-add NET_ADMIN
 
 RUN set -eu && \
     apt-get update && \
